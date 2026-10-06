@@ -1,0 +1,1867 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Untuk Kamu ❤️</title>
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+
+    <style>
+
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            font-family: "Poppins", sans-serif;
+
+            color: #593343;
+
+            background:
+                radial-gradient(
+                    circle at 10% 10%,
+                    rgba(255,255,255,.9),
+                    transparent 25%
+                ),
+
+                radial-gradient(
+                    circle at 90% 20%,
+                    rgba(255,190,215,.5),
+                    transparent 30%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #fff7fa,
+                    #ffe5ee,
+                    #fff3f7
+                );
+
+            min-height: 100vh;
+
+            overflow-x: hidden;
+        }
+
+
+
+        /* =====================================================
+           BACKGROUND
+        ===================================================== */
+
+        body::before {
+
+            content: "";
+
+            position: fixed;
+
+            inset: 0;
+
+            pointer-events: none;
+
+            opacity: .18;
+
+            background-image:
+                radial-gradient(
+                    #d95d84 1px,
+                    transparent 1px
+                );
+
+            background-size: 25px 25px;
+
+            z-index: -1;
+        }
+
+
+
+        /* =====================================================
+           FLOATING HEARTS
+        ===================================================== */
+
+        .floating-heart {
+
+            position: fixed;
+
+            bottom: -50px;
+
+            color: rgba(210,65,110,.35);
+
+            font-size: 25px;
+
+            pointer-events: none;
+
+            animation: floatingHeart 8s linear infinite;
+
+            z-index: 0;
+        }
+
+
+        @keyframes floatingHeart {
+
+            0% {
+
+                transform:
+                    translateY(0)
+                    rotate(0deg);
+
+                opacity: 0;
+
+            }
+
+            15% {
+
+                opacity: 1;
+
+            }
+
+            100% {
+
+                transform:
+                    translateY(-110vh)
+                    rotate(360deg);
+
+                opacity: 0;
+
+            }
+
+        }
+
+
+
+        /* =====================================================
+           GENERAL
+        ===================================================== */
+
+        .section {
+
+            width: min(1100px, 92%);
+
+            margin: auto;
+
+        }
+
+
+        .kicker {
+
+            font-size: 12px;
+
+            letter-spacing: 4px;
+
+            text-transform: uppercase;
+
+            color: #b64e71;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .section-title {
+
+            text-align: center;
+
+            margin-bottom: 40px;
+
+        }
+
+
+        .section-title h2 {
+
+            font-family: "DM Serif Display", serif;
+
+            font-size: clamp(38px, 6vw, 55px);
+
+            color: #a83260;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .section-title p {
+
+            max-width: 650px;
+
+            margin: auto;
+
+            line-height: 1.8;
+
+            color: #805867;
+
+        }
+
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+
+            min-height: 100vh;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            padding: 50px 0;
+
+            position: relative;
+
+        }
+
+
+        .hero-content {
+
+            max-width: 800px;
+
+            position: relative;
+
+            z-index: 2;
+
+        }
+
+
+        .hero h1 {
+
+            font-family: "DM Serif Display", serif;
+
+            font-size: clamp(
+                50px,
+                9vw,
+                90px
+            );
+
+            line-height: .95;
+
+            color: #a83260;
+
+        }
+
+
+        .hero-description {
+
+            max-width: 620px;
+
+            margin:
+
+                25px auto 30px;
+
+            color: #7b5362;
+
+            line-height: 1.8;
+
+        }
+
+
+        /* =====================================================
+           BUTTON
+        ===================================================== */
+
+        .button {
+
+            border: none;
+
+            background: #c63f70;
+
+            color: white;
+
+            padding: 14px 25px;
+
+            border-radius: 50px;
+
+            cursor: pointer;
+
+            font-family: "Poppins";
+
+            font-weight: 600;
+
+            box-shadow:
+                0 12px 30px
+                rgba(198,63,112,.25);
+
+            transition: .3s;
+
+        }
+
+
+        .button:hover {
+
+            transform: translateY(-3px);
+
+            background: #b43262;
+
+        }
+
+
+
+        /* =====================================================
+           JAR
+        ===================================================== */
+
+        .jar-container {
+
+            width: 250px;
+
+            height: 315px;
+
+            position: relative;
+
+            margin: 50px auto 15px;
+
+            cursor: pointer;
+
+            animation:
+                jarFloat 3.5s
+                ease-in-out
+                infinite;
+
+        }
+
+
+        @keyframes jarFloat {
+
+            50% {
+
+                transform:
+                    translateY(-10px);
+
+            }
+
+        }
+
+
+        .jar-lid {
+
+            position: absolute;
+
+            top: 0;
+
+            left: 35px;
+
+            width: 180px;
+
+            height: 35px;
+
+            background: #c9899d;
+
+            border-radius: 8px;
+
+            z-index: 5;
+
+            box-shadow:
+                inset 0 -6px
+                rgba(80,30,50,.15);
+
+        }
+
+
+        .jar {
+
+            position: absolute;
+
+            top: 27px;
+
+            left: 0;
+
+            width: 250px;
+
+            height: 280px;
+
+            border:
+
+                5px solid
+                rgba(255,255,255,.8);
+
+            border-radius:
+
+                35px
+                35px
+                55px
+                55px;
+
+            background:
+
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .35
+                );
+
+            backdrop-filter: blur(7px);
+
+            box-shadow:
+
+                inset 0 0 30px
+                rgba(255,255,255,.8),
+
+                0 20px 40px
+                rgba(100,40,60,.18);
+
+            overflow: hidden;
+
+        }
+
+
+        .jar::after {
+
+            content: "";
+
+            position: absolute;
+
+            left: 20px;
+
+            top: 20px;
+
+            width: 35px;
+
+            height: 190px;
+
+            background:
+
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .35
+                );
+
+            border-radius: 50%;
+
+            transform: rotate(5deg);
+
+        }
+
+
+        /* =====================================================
+           PAPERS
+        ===================================================== */
+
+        .paper {
+
+            position: absolute;
+
+            width: 62px;
+
+            height: 45px;
+
+            background: #fff7cf;
+
+            border-radius: 5px;
+
+            box-shadow:
+                0 5px 10px
+                rgba(50,20,30,.15);
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            font-size: 22px;
+
+            z-index: 2;
+
+        }
+
+
+        .paper-1 {
+
+            left: 20px;
+
+            bottom: 30px;
+
+            transform: rotate(-15deg);
+
+        }
+
+
+        .paper-2 {
+
+            left: 82px;
+
+            bottom: 38px;
+
+            transform: rotate(9deg);
+
+        }
+
+
+        .paper-3 {
+
+            right: 20px;
+
+            bottom: 30px;
+
+            transform: rotate(-8deg);
+
+        }
+
+
+        .paper-4 {
+
+            left: 45px;
+
+            bottom: 85px;
+
+            transform: rotate(12deg);
+
+        }
+
+
+        .paper-5 {
+
+            right: 42px;
+
+            bottom: 80px;
+
+            transform: rotate(-17deg);
+
+        }
+
+
+        .paper-6 {
+
+            left: 91px;
+
+            bottom: 120px;
+
+            transform: rotate(-4deg);
+
+        }
+
+
+        .jar-heart {
+
+            position: absolute;
+
+            top: 80px;
+
+            left: 95px;
+
+            font-size: 55px;
+
+            z-index: 3;
+
+        }
+
+
+        .jar-hint {
+
+            font-size: 12px;
+
+            color: #a55e76;
+
+        }
+
+
+
+        /* =====================================================
+           PHOTO SECTION
+        ===================================================== */
+
+        .content {
+
+            padding: 100px 0;
+
+        }
+
+
+        .gallery {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 15px;
+
+        }
+
+
+        .photo-card {
+
+            background: white;
+
+            padding: 6px;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 10px 30px
+                rgba(100,40,60,.12);
+
+            transition: .3s;
+
+            cursor: pointer;
+
+        }
+
+
+        .photo-card:hover {
+
+            transform:
+                translateY(-7px)
+                rotate(.5deg);
+
+        }
+
+
+        .photo-card img {
+
+            width: 100%;
+
+            height: 260px;
+
+            object-fit: cover;
+
+            border-radius: 15px;
+
+            display: block;
+
+        }
+
+
+
+        /* =====================================================
+           VIDEO
+        ===================================================== */
+
+        .video-wrapper {
+
+            max-width: 850px;
+
+            margin: auto;
+
+            background:
+
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .7
+                );
+
+            padding: 15px;
+
+            border-radius: 30px;
+
+            box-shadow:
+                0 20px 50px
+                rgba(100,40,60,.12);
+
+        }
+
+
+        .video-wrapper video {
+
+            width: 100%;
+
+            max-height: 650px;
+
+            display: block;
+
+            border-radius: 22px;
+
+            background: #20141a;
+
+        }
+
+
+        .video-caption {
+
+            text-align: center;
+
+            padding: 18px 5px 5px;
+
+            font-size: 13px;
+
+            color: #805867;
+
+        }
+
+
+
+        /* =====================================================
+           REASONS
+        ===================================================== */
+
+        .reasons {
+
+            padding: 100px 0;
+
+        }
+
+
+        .reason-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 40px;
+
+            align-items: center;
+
+        }
+
+
+        .reason-info h2 {
+
+            font-family:
+                "DM Serif Display",
+                serif;
+
+            font-size: 55px;
+
+            color: #a83260;
+
+            line-height: 1.05;
+
+        }
+
+
+        .reason-info p {
+
+            margin-top: 20px;
+
+            line-height: 1.8;
+
+            color: #805867;
+
+        }
+
+
+        .reason-card {
+
+            background: #fffdf4;
+
+            border-radius: 30px;
+
+            padding: 40px 30px;
+
+            min-height: 320px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            box-shadow:
+                0 20px 50px
+                rgba(100,40,60,.12);
+
+        }
+
+
+        .reason-number {
+
+            font-size: 12px;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            color: #b44d70;
+
+        }
+
+
+        .reason-text {
+
+            font-family:
+                "DM Serif Display",
+                serif;
+
+            font-size: 28px;
+
+            line-height: 1.5;
+
+            margin: 25px 0;
+
+            color: #5e3444;
+
+        }
+
+
+        .reason-button {
+
+            border: none;
+
+            background: #c63f70;
+
+            color: white;
+
+            padding: 13px 22px;
+
+            border-radius: 50px;
+
+            cursor: pointer;
+
+            font-weight: 600;
+
+        }
+
+
+        .counter {
+
+            font-size: 11px;
+
+            color: #9a6a7a;
+
+            margin-top: 12px;
+
+        }
+
+
+
+        /* =====================================================
+           FINAL
+        ===================================================== */
+
+        .final-section {
+
+            min-height: 80vh;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 100px 20px;
+
+        }
+
+
+        .final-content {
+
+            max-width: 700px;
+
+        }
+
+
+        .final-content h2 {
+
+            font-family:
+                "DM Serif Display",
+                serif;
+
+            font-size:
+                clamp(
+                    50px,
+                    9vw,
+                    80px
+                );
+
+            color: #a83260;
+
+            line-height: 1;
+
+        }
+
+
+        .final-content p {
+
+            margin-top: 25px;
+
+            color: #805867;
+
+            line-height: 1.9;
+
+        }
+
+
+        .signature {
+
+            margin-top: 30px;
+
+            color: #b13e69;
+
+            font-family:
+                "DM Serif Display",
+                serif;
+
+            font-size: 25px;
+
+        }
+
+
+
+        /* =====================================================
+           MODAL PHOTO
+        ===================================================== */
+
+        .modal {
+
+            position: fixed;
+
+            inset: 0;
+
+            background:
+                rgba(
+                    45,
+                    15,
+                    30,
+                    .75
+                );
+
+            display: none;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 20px;
+
+            z-index: 100;
+
+        }
+
+
+        .modal.active {
+
+            display: flex;
+
+        }
+
+
+        .modal-content {
+
+            position: relative;
+
+            max-width: 900px;
+
+            max-height: 90vh;
+
+        }
+
+
+        .modal-content img {
+
+            max-width: 100%;
+
+            max-height: 85vh;
+
+            border-radius: 20px;
+
+            display: block;
+
+            box-shadow:
+                0 25px 70px
+                rgba(0,0,0,.4);
+
+        }
+
+
+        .close-modal {
+
+            position: absolute;
+
+            right: -10px;
+
+            top: -50px;
+
+            width: 40px;
+
+            height: 40px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background: white;
+
+            color: #79394f;
+
+            font-size: 22px;
+
+            cursor: pointer;
+
+        }
+
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media(max-width: 800px) {
+
+            .gallery {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+            }
+
+
+            .reason-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .reason-info {
+
+                text-align: center;
+
+            }
+
+        }
+
+
+        @media(max-width: 500px) {
+
+            .hero {
+
+                padding: 30px 0;
+
+            }
+
+
+            .hero h1 {
+
+                font-size: 52px;
+
+            }
+
+
+            .gallery {
+
+                gap: 10px;
+
+            }
+
+
+            .photo-card {
+
+                padding: 4px;
+
+                border-radius: 15px;
+
+            }
+
+
+            .photo-card img {
+
+                height: 220px;
+
+                border-radius: 12px;
+
+            }
+
+
+            .reason-info h2 {
+
+                font-size: 45px;
+
+            }
+
+
+            .reason-text {
+
+                font-size: 24px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+
+<!-- =====================================================
+     FLOATING HEARTS
+===================================================== -->
+
+<div class="floating-heart"
+     style="left:10%;animation-delay:0s;">
+    ♥
+</div>
+
+<div class="floating-heart"
+     style="left:25%;animation-delay:2s;">
+    ♡
+</div>
+
+<div class="floating-heart"
+     style="left:45%;animation-delay:4s;">
+    ♥
+</div>
+
+<div class="floating-heart"
+     style="left:65%;animation-delay:1s;">
+    ♡
+</div>
+
+<div class="floating-heart"
+     style="left:85%;animation-delay:3s;">
+    ♥
+</div>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="kicker">
+            A little something for you
+        </div>
+
+
+        <h1>
+            30 Alasan<br>
+            Aku Suka Kamu ❤️
+        </h1>
+
+
+        <p class="hero-description">
+
+            Aku mungkin nggak selalu pintar
+            ngomong langsung.
+
+            Jadi aku bikin tempat kecil ini
+            buat nyimpen beberapa hal
+            yang aku suka dari kamu.
+
+        </p>
+
+
+
+        <!-- JAR -->
+
+        <div
+            class="jar-container"
+            onclick="openReasons()"
+        >
+
+            <div class="jar-lid"></div>
+
+
+            <div class="jar">
+
+                <div class="paper paper-1">
+                    💌
+                </div>
+
+                <div class="paper paper-2">
+                    💕
+                </div>
+
+                <div class="paper paper-3">
+                    🌷
+                </div>
+
+                <div class="paper paper-4">
+                    💗
+                </div>
+
+                <div class="paper paper-5">
+                    💖
+                </div>
+
+                <div class="paper paper-6">
+                    💌
+                </div>
+
+
+                <div class="jar-heart">
+                    ❤️
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="jar-hint">
+            ✨ Klik toplesnya ✨
+        </div>
+
+
+        <br><br>
+
+
+        <button
+            class="button"
+            onclick="scrollToSection('photos')"
+        >
+
+            Lihat kenangan ↓
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PHOTO SECTION
+===================================================== -->
+
+<section
+    class="content section"
+    id="photos"
+>
+
+    <div class="section-title">
+
+        <div class="kicker">
+            Our little memories
+        </div>
+
+        <h2>
+            Foto-foto Kamu 📸
+        </h2>
+
+        <p>
+
+            Beberapa foto yang bikin
+            aku senyum setiap kali lihat.
+
+        </p>
+
+    </div>
+
+
+
+    <div class="gallery">
+
+
+        <!-- FOTO 1 -->
+
+        <div class="photo-card">
+
+            <img
+                src="assets/foto1.jpeg"
+                alt="Foto kamu 1"
+                onclick="openPhoto(this.src)"
+            >
+
+        </div>
+
+
+
+        <!-- FOTO 2 -->
+
+        <div class="photo-card">
+
+            <img
+                src="assets/foto2.jpeg"
+                alt="Foto kamu 2"
+                onclick="openPhoto(this.src)"
+            >
+
+        </div>
+
+
+
+        <!-- FOTO 3 -->
+
+        <div class="photo-card">
+
+            <img
+                src="assets/foto3.jpeg"
+                alt="Foto kamu 3"
+                onclick="openPhoto(this.src)"
+            >
+
+        </div>
+
+
+
+        <!-- FOTO 4 -->
+
+        <div class="photo-card">
+
+            <img
+                src="assets/foto4.jpeg"
+                alt="Foto kamu 4"
+                onclick="openPhoto(this.src)"
+            >
+
+        </div>
+
+
+
+        <!-- FOTO 5 -->
+
+        <div class="photo-card">
+
+            <img
+                src="assets/foto5.jpeg"
+                alt="Foto kamu 5"
+                onclick="openPhoto(this.src)"
+            >
+
+        </div>
+
+
+
+        <!-- FOTO 6 -->
+
+        <div class="photo-card">
+
+            <img
+                src="assets/foto6.jpeg"
+                alt="Foto kamu 6"
+                onclick="openPhoto(this.src)"
+            >
+
+        </div>
+
+
+
+        <!-- FOTO 7 -->
+
+        <div class="photo-card">
+
+            <img
+                src="assets/foto7.jpeg"
+                alt="Foto kamu 7"
+                onclick="openPhoto(this.src)"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     VIDEO SECTION
+===================================================== -->
+
+<section class="content section">
+
+    <div class="section-title">
+
+        <div class="kicker">
+            A little video for you
+        </div>
+
+
+        <h2>
+            Satu Video 🎬
+        </h2>
+
+
+        <p>
+
+            Kalau sudah sampai sini,
+            coba tekan play. ❤️
+
+        </p>
+
+    </div>
+
+
+
+    <div class="video-wrapper">
+
+        <video
+            controls
+            playsinline
+            preload="metadata"
+        >
+
+            <source
+                src="assets/video-kamu.mp4"
+                type="video/mp4"
+            >
+
+            Browser kamu
+            belum mendukung video.
+
+        </video>
+
+
+        <div class="video-caption">
+
+            Semoga kamu senyum
+            waktu lihat ini. 🤍
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     30 REASONS
+===================================================== -->
+
+<section
+    class="reasons section"
+    id="reasons"
+>
+
+
+    <div class="reason-grid">
+
+
+        <div class="reason-info">
+
+            <div class="kicker">
+                Open them one by one
+            </div>
+
+
+            <h2>
+
+                Masih ada
+                <br>
+                30 alasan. 💌
+
+            </h2>
+
+
+            <p>
+
+                Jangan dibaca semuanya
+                sekaligus ya.
+
+                Ambil satu alasan setiap kali
+                kamu butuh sedikit alasan
+                untuk tersenyum.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="reason-card">
+
+
+            <div
+                class="reason-number"
+                id="reasonNumber"
+            >
+
+                Alasan #1
+
+            </div>
+
+
+
+            <div
+                class="reason-text"
+                id="reasonText"
+            >
+
+                Aku suka senyum kamu.
+
+            </div>
+
+
+
+            <button
+                class="reason-button"
+                onclick="nextReason()"
+            >
+
+                Alasan berikutnya 💕
+
+            </button>
+
+
+
+            <div
+                class="counter"
+                id="counter"
+            >
+
+                1 / 30
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FINAL MESSAGE
+===================================================== -->
+
+<section class="final-section">
+
+
+    <div class="final-content">
+
+
+        <div class="kicker">
+            One last thing...
+        </div>
+
+
+        <h2>
+
+            Thank you<br>
+            for being you. ❤️
+
+        </h2>
+
+
+        <p>
+
+            Dari sekian banyak orang
+            yang bisa aku kenal,
+
+            aku bersyukur salah satunya
+            adalah kamu.
+
+            <br><br>
+
+            Mungkin 30 alasan ini
+            belum cukup.
+
+            Tapi setidaknya sekarang
+            kamu tahu sedikit alasannya.
+
+        </p>
+
+
+        <div class="signature">
+
+            — dari seseorang
+            yang suka kamu ❤️
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PHOTO MODAL
+===================================================== -->
+
+<div
+    class="modal"
+    id="photoModal"
+    onclick="closePhoto(event)"
+>
+
+
+    <div class="modal-content">
+
+
+        <button
+            class="close-modal"
+            onclick="closePhoto()"
+        >
+
+            ×
+
+        </button>
+
+
+        <img
+            id="modalImage"
+            src=""
+            alt="Foto diperbesar"
+        >
+
+    </div>
+
+</div>
+
+
+
+<script>
+
+
+/* =====================================================
+   30 ALASAN
+===================================================== */
+
+const reasons = [
+
+    "Aku suka senyum kamu.",
+
+    "Aku suka cara kamu cerita tentang hal-hal yang kamu suka.",
+
+    "Kamu selalu punya cara sendiri buat bikin aku ketawa.",
+
+    "Aku suka suara kamu waktu lagi excited cerita sesuatu.",
+
+    "Kamu bikin hari biasa terasa lebih menyenangkan.",
+
+    "Aku suka perhatian kecil yang kamu kasih tanpa sadar.",
+
+    "Kamu punya cara sendiri buat bikin aku nyaman.",
+
+    "Aku suka ketika kamu jadi diri kamu sendiri.",
+
+    "Aku suka cara kamu memperlakukan orang lain.",
+
+    "Kamu selalu berhasil bikin aku kepikiran kamu.",
+
+    "Aku suka ekspresi kamu waktu lagi malu.",
+
+    "Aku suka ketika kamu ketawa sampai lupa menjaga image.",
+
+    "Kamu punya sisi kecil yang mungkin nggak semua orang tahu.",
+
+    "Aku suka ngobrol sama kamu, bahkan tentang hal random sekalipun.",
+
+    "Kamu bikin aku merasa dihargai.",
+
+    "Aku suka semangat kamu ketika mengejar sesuatu.",
+
+    "Aku suka ketika kamu perhatian sama hal-hal kecil.",
+
+    "Kamu adalah salah satu alasan aku menunggu hari esok.",
+
+    "Aku suka cara kamu melihat sesuatu dari sudut pandangmu sendiri.",
+
+    "Aku suka ketika kamu cerita tentang harimu.",
+
+    "Kamu bisa bikin aku senyum cuma dari satu chat.",
+
+    "Aku suka saat kamu berusaha walaupun kamu bilang itu hal kecil.",
+
+    "Kamu punya tempat spesial di pikiranku.",
+
+    "Aku suka semua momen sederhana yang pernah kita lewati.",
+
+    "Aku suka caramu membuat aku merasa dekat denganmu.",
+
+    "Bersamamu, aku nggak perlu pura-pura jadi orang lain.",
+
+    "Aku suka hal-hal kecil tentang kamu yang bahkan mungkin kamu sendiri nggak sadar.",
+
+    "Entah kenapa, setiap kali lihat kamu, mood-ku jadi lebih baik.",
+
+    "Semakin mengenal kamu, semakin banyak alasan buat menyukaimu.",
+
+    "Dan alasan terakhir: karena kamu adalah kamu. ❤️"
+
+];
+
+
+let currentReason = 0;
+
+
+
+/* =====================================================
+   SCROLL
+===================================================== */
+
+function scrollToSection(id) {
+
+    document
+        .getElementById(id)
+        .scrollIntoView({
+            behavior: "smooth"
+        });
+
+}
+
+
+
+/* =====================================================
+   OPEN REASONS
+===================================================== */
+
+function openReasons() {
+
+    document
+        .getElementById("reasons")
+        .scrollIntoView({
+            behavior: "smooth"
+        });
+
+}
+
+
+
+/* =====================================================
+   NEXT REASON
+===================================================== */
+
+function nextReason() {
+
+    currentReason++;
+
+    if (
+        currentReason >=
+        reasons.length
+    ) {
+
+        currentReason = 0;
+
+    }
+
+
+    document
+        .getElementById("reasonNumber")
+        .textContent =
+        "Alasan #" +
+        (currentReason + 1);
+
+
+    document
+        .getElementById("reasonText")
+        .textContent =
+        reasons[currentReason];
+
+
+    document
+        .getElementById("counter")
+        .textContent =
+        (currentReason + 1) +
+        " / 30";
+
+}
+
+
+
+/* =====================================================
+   OPEN PHOTO
+===================================================== */
+
+function openPhoto(src) {
+
+    document
+        .getElementById("modalImage")
+        .src = src;
+
+
+    document
+        .getElementById("photoModal")
+        .classList.add("active");
+
+}
+
+
+
+/* =====================================================
+   CLOSE PHOTO
+===================================================== */
+
+function closePhoto(event) {
+
+    const modal =
+        document.getElementById(
+            "photoModal"
+        );
+
+
+    if (
+        !event ||
+        event.target === modal ||
+        event.target.classList.contains(
+            "close-modal"
+        )
+    ) {
+
+        modal.classList.remove(
+            "active"
+        );
+
+    }
+
+}
+
+
+
+/* =====================================================
+   ESCAPE CLOSE PHOTO
+===================================================== */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (
+            event.key === "Escape"
+        ) {
+
+            document
+                .getElementById(
+                    "photoModal"
+                )
+                .classList.remove(
+                    "active"
+                );
+
+        }
+
+    }
+);
+
+
+</script>
+
+
+</body>
+
+</html>
